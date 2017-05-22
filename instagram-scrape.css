@@ -1,0 +1,33 @@
+.instagram-scrape-wrapper {
+    float: right;
+    width: 50%;
+}
+
+.instagram-scrape-img {
+    line-height: 0;
+    float: left;
+    width: 50%;
+}
+
+.instagram-scrape-img img {
+    max-width: 100%;
+}
+
+
+
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}

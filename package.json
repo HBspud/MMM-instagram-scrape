@@ -1,0 +1,29 @@
+{
+  "name": "mmm-instagram-scrape",
+  "version": "1.0.0",
+  "description": "A MagicMirror module that scrapes Instagram and displays pictures on your mirror.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HBspud/MMM-instagram-scrape.git"
+  },
+  "keywords": [
+    "magic",
+    "mirror",
+    "module",
+    "instagram",
+    "scrape"
+  ],
+  "author": "HBspud",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HBspud/MMM-instagram-scrape/issues"
+  },
+  "homepage": "https://github.com/HBspud/MMM-instagram-scrape#readme",
+  "dependencies": {
+    "instagram-screen-scrape": "^2.0.0"
+  }
+}
