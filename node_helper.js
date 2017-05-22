@@ -9,13 +9,13 @@ module.exports = NodeHelper.create({
     },
     
     // subclass socketNotificationReceived
-    socketNotificationReceived: function(notification, payload){
+    socketNotificationReceived: function(notification, config){
         if (notification === 'INSTAGRAM_GET') {
-            this.getImagesFromJSON(payload);
+            this.getImagesFromJSON(config.username, config.maxImages);
         }
     },
     
-    getImagesFromJSON: function(username) {
+    getImagesFromJSON: function(username, maxImages) {
         var self = this;
         var images = [];
         
@@ -24,7 +24,13 @@ module.exports = NodeHelper.create({
         });
         
         streamOfPosts.on('data', function(post) {
-            images.push(post.media);
+            if(images.length >= maxImages) {
+                this.destroy();
+            } else {
+                if(post.type == "image") {
+                    images.push(post.media);
+                }
+            }
         });
         
         streamOfPosts.on('end', function() {

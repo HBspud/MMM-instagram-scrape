@@ -21,7 +21,7 @@ Module.register('MMM-instagram-scrape', {
     },
     
     grabPhotos: function() {
-        this.sendSocketNotification("INSTAGRAM_GET", this.config.username);
+        this.sendSocketNotification("INSTAGRAM_GET", this.config);
         
     },
     
